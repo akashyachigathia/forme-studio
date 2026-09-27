@@ -1,0 +1,334 @@
+
+@font-face {
+    font-family: "Chillax";
+    src: url("fonts/Chillax-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Satoshilight";
+    src: url("fonts/Satoshi-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Third_font";
+    src: url("fonts/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2") format("woff2");
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    // overflow: hidden;
+}
+
+@mixin flex-column ($gap: 0rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+html{
+    color: white;
+    font-size: clamp(14px, 1.2vw, 18px);
+}
+
+P{
+    font-family: Satoshilight;
+}
+
+h1,h2{
+     font-family: Chillax;
+}
+
+
+h3{
+     font-family: Chillax;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+}
+
+h4{
+      font-family: Third_font;
+      text-transform: uppercase;
+      
+}
+
+small{
+font-family: Third_font;
+}
+
+
+section{
+    max-width: 1600px ;
+}
+
+main{
+    width: 100%;
+  @include flex-column(0rem);
+  align-items: center;
+
+
+    section.view1 {
+        width: 100%;
+        @include flex-column(0.8rem);
+        padding: 1rem;
+
+        .top{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0.4rem;
+            }
+        }
+
+        .bottom{
+            background-color: #1E1E1E;
+            padding: 1rem;
+             border-radius: 0.4rem;
+          @include flex-column(2.5rem);
+        }
+
+        .text{
+          @include flex-column(1.3rem);
+        }
+
+        p{
+            line-height: 2.3rem;
+            font-size: 1.5rem;
+            font-weight: 100;
+            opacity: 0.8;
+        }
+
+        h1{
+            font-weight: 200;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            line-height: 2.7rem;
+        }
+
+        button{
+            width: fit-content;
+            padding: 0.7rem 1rem;
+            border-radius: 0.3rem;
+            border: none;
+            outline: none;
+            @include flex-column(0rem);            
+        }
+
+    }
+
+
+    section.view2{
+        @include flex-column(1.8rem);
+        width: 100%;
+        padding: 3rem;
+
+        .top2, .bottom2 {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+            .element{
+                  text-align: center;  
+        
+                small{
+                    opacity: 0.5;
+                }
+                  
+
+                h2{
+                    font-size: 3rem;
+                    font-weight: 400;
+                }
+            }
+        
+    }
+
+
+    section.view3{
+        @include flex-column(0.8rem);
+        width: 100%;
+        padding: 1rem;
+ 
+        .top3{
+            width: 100%;
+            img{
+                width: 100%;
+                border-radius: 0.4rem;
+            }
+        }
+
+          .bottom3{
+            background-color: #1E1E1E;
+            padding: 1rem;
+            border-radius: 0.4rem;
+            @include flex-column(2.5rem);
+        }
+
+            .text{
+          @include flex-column(1.3rem);
+        }
+
+        p{
+            line-height: 2.3rem;
+            font-size: 1.5rem;
+            font-weight: 100;
+            opacity: 0.8;
+        }
+
+        h1{
+            font-weight: 200;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            line-height: 2.7rem;
+        }
+
+        button{
+            width: fit-content;
+            padding: 0.7rem 1rem;
+            border-radius: 0.3rem;
+            border: none;
+            outline: none;
+            @include flex-column(0rem);            
+        }
+        
+    }
+
+
+    section.view4{
+       @include flex-column(2rem);  
+
+       gap: 1rem;
+       width: 100%;
+       padding: 1rem;
+
+       .card{
+        width: 100%;
+        aspect-ratio: 1/1;
+        background-size: cover;
+        border-radius: 0.7rem;
+        background-image: url(/images/profile1.webp);
+        @include flex-column(0rem);
+        justify-content: space-between;
+        padding: 1rem;
+
+
+        .icon,.bottom4{
+background-color: #b2b2b244;
+backdrop-filter: blur(5px);
+border: 0.6px solid rgba(255, 255, 255, 0.281);
+border-radius: 0.7rem;
+padding: 0.5rem;
+        }
+
+        .top4{
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+        }
+
+        .bottom4{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+        }
+
+        .icon {
+    width: fit-content;
+    border-radius: 50%;
+    
+        }
+      
+
+
+       }
+    }
+}
+
+@media (min-width:900px){
+    main    {
+        
+      section.view1{
+        flex-direction: row;
+         padding: 1rem 2rem;
+        .top,.bottom{
+        width: 50%;
+         }
+      
+
+         .bottom{
+        justify-content: space-between;
+        padding: 3rem 3rem; 
+        }
+
+        .text{
+            h1{
+            font-size: 3.3rem;
+            line-height: 3.7rem;
+            }
+
+            p{
+                font-size: 1.1rem;
+                width: 80%;
+                line-height: 1.6rem;
+            }
+        }
+    }
+
+            section.view2{
+                flex-direction: row;
+                padding: 1rem 2rem;
+            }
+
+
+ section.view3{
+        flex-direction: row-reverse;
+         padding: 1rem 2rem;
+
+
+        .top3, .bottom3{
+        width: 50%;
+         }
+
+          .bottom3{
+         justify-content: space-between;
+         padding: 3rem 3rem; 
+         }
+
+            .text  {
+            h1{
+            font-size: 2.3rem;
+            line-height: 2.6rem;
+            }
+
+            p{
+                font-size: 1rem;
+                width: 80%;
+                line-height: 1.4rem;
+            }
+
+            .copy_section{
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+    }
+
+    section.view4{
+        flex-direction: row;
+         padding: 1rem 2rem;
+    }
+}
+}
